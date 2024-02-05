@@ -1,0 +1,31 @@
+{
+  "name": "0bd97e2e-8dae-43e7-87da-31a3809c7301",
+  "displayName": "Good Bye",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Here is a short conversation summary as a recap for you: $request.generative.chat-summary. Thanks for contacting us, goodbye!" ]
+      },
+      "languageCode": "en"
+    } ],
+    "generators": [ {
+      "generator": "projects/vertexai-mlops-workshops/locations/global/agents/0ada70b2-a46f-4196-a41d-203857966097/generators/18588593-1ad6-4bd8-bece-278b8f597bad",
+      "outputParameter": "$request.generative.chat-summary"
+    } ]
+  },
+  "eventHandlers": [ {
+    "event": "DEALER",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "goodbye" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d6c832d8-58b1-421b-b2d2-820812e81e64"
+  } ]
+}

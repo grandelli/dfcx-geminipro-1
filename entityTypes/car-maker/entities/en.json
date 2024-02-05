@@ -1,0 +1,23 @@
+{
+  "entities": [ {
+    "value": "Mini",
+    "synonyms": [ "Mini" ],
+    "languageCode": "en"
+  }, {
+    "value": "Mercedes",
+    "synonyms": [ "Mercedes" ],
+    "languageCode": "en"
+  }, {
+    "value": "Ferrari",
+    "synonyms": [ "Ferrari" ],
+    "languageCode": "en"
+  }, {
+    "value": "Fiat",
+    "synonyms": [ "Fiat" ],
+    "languageCode": "en"
+  }, {
+    "value": "BMW",
+    "synonyms": [ "BMW" ],
+    "languageCode": "en"
+  } ]
+}

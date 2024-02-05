@@ -1,0 +1,60 @@
+{
+  "name": "df01bb04-f6b2-45bf-8fac-aad998264578",
+  "displayName": "Choose Dealer",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Here are the closest dealers" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Here are the closest dealers" ]
+      },
+      "languageCode": "en",
+      "channel": "DF_MESSENGER"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "event": {
+            "event": "Best Tyre - Pirelli"
+          },
+          "subtitle": "5 mins away",
+          "title": "Best Tyre - Pirelli",
+          "type": "list"
+        }, {
+          "type": "divider"
+        }, {
+          "event": {
+            "event": "Giordano's Tyre"
+          },
+          "subtitle": "10 mins away",
+          "title": "Giordano's Tyre",
+          "type": "list"
+        } ] ]
+      },
+      "languageCode": "en",
+      "channel": "DF_MESSENGER"
+    } ]
+  },
+  "eventHandlers": [ {
+    "targetPage": "Good Bye",
+    "event": "DEALER",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your appointment with $session.params.dealer-name to change your tyres is now confirmed!" ]
+        },
+        "languageCode": "en"
+      } ],
+      "generators": [ {
+        "generator": "projects/vertexai-mlops-workshops/locations/global/agents/0ada70b2-a46f-4196-a41d-203857966097/generators/18588593-1ad6-4bd8-bece-278b8f597bad",
+        "outputParameter": "$request.generative.summarized-conv"
+      } ]
+    },
+    "name": "fd8be4a5-b472-4989-915f-375f823c0688"
+  } ]
+}

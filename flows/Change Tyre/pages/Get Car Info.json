@@ -1,0 +1,51 @@
+{
+  "name": "7ba083d2-76d8-4d85-9296-839e9031ba8d",
+  "displayName": "Get Car Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "car-maker",
+      "required": true,
+      "entityType": "@car-maker",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is the car maker brand?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "customer-zipcode",
+      "required": true,
+      "entityType": "@sys.zip-code",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Could you tell us the zipcode where you live?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "The tyre size is $session.params.tyre_size\n" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Choose Dealer",
+    "name": "8e785619-6850-40a7-ad0a-bf94c3253760"
+  } ]
+}

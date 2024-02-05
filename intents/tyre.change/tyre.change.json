@@ -1,0 +1,7 @@
+{
+  "name": "7b687953-9f09-424a-979f-6b273f1ddaa4",
+  "displayName": "tyre.change",
+  "priority": 500000,
+  "skipAutoAnnotation": true,
+  "numTrainingPhrases": 5
+}

@@ -1,0 +1,7 @@
+{
+  "name": "4843812e-a88f-4b85-9768-63aac37a3589",
+  "displayName": "file.upload",
+  "priority": 500000,
+  "description": "the user uploads a file",
+  "numTrainingPhrases": 4
+}

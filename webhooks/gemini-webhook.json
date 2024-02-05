@@ -1,0 +1,11 @@
+{
+  "name": "89e4186b-0bbb-4747-8b53-b9e8c42607f2",
+  "displayName": "gemini-webhook",
+  "genericWebService": {
+    "uri": "https://us-central1-vertexai-mlops-workshops.cloudfunctions.net/gemini-webhook",
+    "serviceAgentAuth": "ID_TOKEN"
+  },
+  "timeout": {
+    "seconds": 30
+  }
+}

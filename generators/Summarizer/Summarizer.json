@@ -1,0 +1,13 @@
+{
+  "name": "18588593-1ad6-4bd8-bece-278b8f597bad",
+  "displayName": "Summarizer",
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 128,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-pro"
+  }
+}

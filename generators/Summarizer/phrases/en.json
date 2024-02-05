@@ -1,0 +1,6 @@
+{
+  "promptTexts": [ {
+    "text": "please give a summary of this conversation: $conversation and say goodbye to the user",
+    "languageCode": "en"
+  } ]
+}

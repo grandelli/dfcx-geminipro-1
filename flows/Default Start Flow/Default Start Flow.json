@@ -1,0 +1,69 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "38b719d6-25ce-4a26-b515-350f24525a26"
+  }, {
+    "intent": "file.upload",
+    "triggerFulfillment": {
+      "webhook": "gemini-webhook",
+      "tag": "confirm",
+      "setParameterActions": [ {
+        "parameter": "file_path",
+        "value": "$session.params.files[0]"
+      } ]
+    },
+    "targetPage": "LLM Call",
+    "name": "04491242-9a94-467a-8da6-0171e4b30765"
+  }, {
+    "intent": "tyre.change",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please upload a picture from the side" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Change Tyre",
+    "name": "c7043209-9157-486e-a8d2-f6359c1b9383"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2e186714-8d07-4b54-9f66-ba8b4a209071"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "780f7a06-4fdf-458c-a920-618c32a78058"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  }
+}
