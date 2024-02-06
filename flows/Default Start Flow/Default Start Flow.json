@@ -14,18 +14,6 @@
     },
     "name": "38b719d6-25ce-4a26-b515-350f24525a26"
   }, {
-    "intent": "file.upload",
-    "triggerFulfillment": {
-      "webhook": "gemini-webhook",
-      "tag": "confirm",
-      "setParameterActions": [ {
-        "parameter": "file_path",
-        "value": "$session.params.files[0]"
-      } ]
-    },
-    "targetPage": "LLM Call",
-    "name": "04491242-9a94-467a-8da6-0171e4b30765"
-  }, {
     "intent": "tyre.change",
     "triggerFulfillment": {
       "messages": [ {
@@ -60,6 +48,17 @@
       } ]
     },
     "name": "780f7a06-4fdf-458c-a920-618c32a78058"
+  }, {
+    "event": "WELCOME",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! What can I do for you today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f2b93ca7-8327-4585-ab2c-d278024c4106"
   } ],
   "nluSettings": {
     "modelType": "MODEL_TYPE_ADVANCED",

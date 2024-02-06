@@ -4,12 +4,6 @@
   "transitionRoutes": [ {
     "intent": "file.upload",
     "triggerFulfillment": {
-      "messages": [ {
-        "text": {
-          "text": [ "Processing the image, hold on please" ]
-        },
-        "languageCode": "en"
-      } ],
       "webhook": "gemini-webhook",
       "tag": "confirm",
       "setParameterActions": [ {
